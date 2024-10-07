@@ -1,0 +1,1 @@
+# plugins-api-bing-map-2018
