@@ -113,7 +113,7 @@ class BingMapPro_Includes{
                 <div id="bmp_feedback_wrapper" style="display: none"> </div>
                     <div id="bmp_feedback_container" style="display: none;">
                         <div class="bmp-feedback-header">
-                                <h2><?php echo esc_html( __( "We're sorry to see you go", 'bing-map-pro' ) ); ?></h2>
+                                <h2><?php esc_html_e("We're sorry to see you go", 'bing-map-pro' ); ?></h2>
                                 <div id="bmp_modal_close" >
                                     <svg id="bmp_close_svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                                         <path class="bmp-close-path" d="M14.5,1.5l-13,13m0-13,13,13" transform="translate(-1 -1)"></path>
@@ -130,11 +130,11 @@ class BingMapPro_Includes{
                                 <?php
 
                                 $radio_buttons = array(
-                                    __( "Lack of functionality", 'bing-map-pro' ),
-                                    __( "Too difficult to use", 'bing-map-pro' ),
-                                    __( "The plugin isn't working", 'bing-map-pro' ),
-                                    __( "The plugin isn't useful", 'bing-map-pro' ),
-                                    __( 'Temporarily disabling or troubleshooting', 'bing-map-pro' )                                   
+                                    esc_html__( "Lack of functionality", 'bing-map-pro' ),
+                                    esc_html__( "Too difficult to use", 'bing-map-pro' ),
+                                    esc_html__( "The plugin isn't working", 'bing-map-pro' ),
+                                    esc_html__( "The plugin isn't useful", 'bing-map-pro' ),
+                                    esc_html__( 'Temporarily disabling or troubleshooting', 'bing-map-pro' )                                   
                                 );
 
                                 $buttons_count = count( $radio_buttons );

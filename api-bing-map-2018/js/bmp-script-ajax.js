@@ -517,7 +517,7 @@ function bmp_append_new_map( $map ){
                         "<button type='button' data-id='" + $map['id'] + "' id='delete_bmp_map' onclick='BmpDeleteMap(this)' class='button btn-danger delete-bmp-map' > <i class='fa fa-trash'> </i> </button>" +
                     "</td>");
 
-    elements.push( $ckbActive, $title, $shortcode, $active_pins, $active_shapes, $actions );   
+    elements.push( $actions, $title, $shortcode, $active_pins, $active_shapes, $ckbActive );   
                 
     bmpX( $row ).append( elements );
     bmpX( '#mapsTable tbody').prepend( $row );

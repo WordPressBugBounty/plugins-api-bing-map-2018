@@ -607,7 +607,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
             echo json_encode( 
                 array(
                     'error' => true,
-                    'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                    'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
             ));
             wp_die();
         } 
@@ -709,7 +709,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
             echo json_encode( 
                 array(
                     'error' => true,
-                    'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                    'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
             ));
             wp_die();
         } 
@@ -736,7 +736,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
                     echo json_encode( 
                         array(
                             'error' => true,
-                            'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                            'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
                     ));
                     wp_die();
                 } 
@@ -765,7 +765,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
                 echo json_encode( 
                     array(
                         'error' => true,
-                        'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                        'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
                 ));
 
                wp_die();
@@ -1087,7 +1087,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
             echo json_encode( 
                 array(
                     'error' => true,
-                    'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                    'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
             ));
 
            wp_die();
@@ -1128,7 +1128,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
                 echo json_encode( 
                     array(
                         'error' => true,
-                        'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                        'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
                 ));
 
                 wp_die();
@@ -1213,7 +1213,7 @@ class BingMapPro_LifeCycle extends BingMapPro_InstallIndicator\BingMapPro_Instal
                 echo json_encode( 
                     array(
                         'error' => true,
-                        'message' => __('Error. Sorry, the page did not verify.', 'bing-map-pro')
+                        'message' => esc_html__('Error. Sorry, the page did not verify.', 'bing-map-pro')
                 ));
 
                 wp_die();

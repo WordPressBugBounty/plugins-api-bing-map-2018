@@ -2,7 +2,7 @@
 /*
 * Plugin Name: WP Bing Map Pro
 * Plugin URI: https://tuskcode.com
-* Version: 5.0.1
+* Version: 5.0.2
 * Author: dan009
 * Description: Simple, and easy to use, unlimited maps, pins, and infoboxes for every page on your website
 * Text Domain: bing-map-pro
@@ -12,7 +12,7 @@
 if( ! defined('ABSPATH') ) die('No Access to this page');
 
 $BingMapPro_MinimalRequiredPhpVersion = '5.2';
-$BMP_PLUGIN_VERSION = '5.0.1';
+$BMP_PLUGIN_VERSION = '5.0.2';
 define( 'BMP_PLUGIN_URL', plugins_url( '', __FILE__ ) );
 
 /* Check the php version, and display a message if the running version is lower than the required on */

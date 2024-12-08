@@ -34,12 +34,12 @@ function bmp_maps( $maps, $bmp_api_key, $bmp_menu_links ){
                  
                 <table id="mapsTable"  class='table table-striped'>
                     <thead> <tr> 
-                                <th> <?php esc_html_e('Active', 'bing-map-pro');?>      </th> 
+                                <th> <?php esc_html_e('Actions', 'bing-map-pro');?>     </th>                               
                                 <th> <?php esc_html_e('Title', 'bing-map-pro');?>       </th> 
                                 <th> <?php esc_html_e('Short Code', 'bing-map-pro');?>  </th>
                                 <th> <?php esc_html_e('Active Pins', 'bing-map-pro');?>        </th>
                                 <th> <?php esc_html_e('Shapes', 'bing-map-pro');?>      </th>
-                                <th> <?php esc_html_e('Actions', 'bing-map-pro');?>     </th>
+                                <th> <?php esc_html_e('Active', 'bing-map-pro');?>      </th> 
                             </tr>
                     </thead>
 
@@ -48,16 +48,17 @@ function bmp_maps( $maps, $bmp_api_key, $bmp_menu_links ){
                             foreach( $maps as $map ){ 
                                 $shortcode = esc_html(  ($map['shortcode'] == '' ) ? "[bing-map-pro id={$map['id']}]" : "[{$map['shortcode']}]" );
                                 echo    '<tr id="map_' . esc_html($map['id']) . '">'. 
-                                            '<td> '. bmp_showActive( $map['active'], $map['id'] ) . '</td>'.
+                                            '<td> <button type="button" data-id='.esc_html($map['id']).'  id="edit_bmp_map" class="button btn-success edit-bmp-map"
+                                                    data-toggle="tooltip" data-placement="bottom" title="'. esc_html__('Edit', 'bing-map-pro').'"> <i class="fa fa-edit"></i> </button> <span class="spacer"> </span> '.
+                                                '<button type="button" data-id='.esc_html($map['id']).' onclick="BmpDeleteMap(this)" id="delete_bmp_map" class="button btn-danger delete-bmp-map"
+                                                    data-toggle="tooltip" data-placement="bottom" title="'. esc_html__('Delete', 'bing-map-pro').'"> <i class="fa fa-trash"></i> </button>'.
+                                            '</td>'.
                                             '<td> '. str_replace('\\', '', esc_html( $map['title'] ) ) . '</td>'.
                                             '<td> <input type="text" readonly value="'. $shortcode .'"  /> </td>'.
                                             '<td>'.(isset($map['pin_no']) ? $map['pin_no'] : '0').'</td>' .
                                             '<td> '.(isset($map['shape_no']) ? $map['shape_no'] : '0').'</td>' .
-                                            '<td> <button type="button" data-id='.esc_html($map['id']).'  id="edit_bmp_map" class="button btn-success edit-bmp-map"
-                                                  data-toggle="tooltip" data-placement="bottom" title="'. esc_html__('Edit', 'bing-map-pro').'"> <i class="fa fa-edit"></i> </button> <span class="spacer"> </span> '.
-                                                '<button type="button" data-id='.esc_html($map['id']).' onclick="BmpDeleteMap(this)" id="delete_bmp_map" class="button btn-danger delete-bmp-map"
-                                                  data-toggle="tooltip" data-placement="bottom" title="'. esc_html__('Delete', 'bing-map-pro').'"> <i class="fa fa-trash"></i> </button>'.
-                                            '</td>'.
+ 
+                                             '<td> '. bmp_showActive( $map['active'], $map['id'] ) . '</td>'.
                                         '</tr>';
                                 
                             }

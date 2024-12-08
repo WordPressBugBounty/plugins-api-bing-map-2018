@@ -38,9 +38,26 @@ $bmp_table_shapes       = $wpdb->prefix . 'bingmappro_shapes';
 $bmp_table_map_shapes   = $wpdb->prefix . 'bingmappro_map_shapes';
 $bmp_table_map_shortcodes = $wpdb->prefix . 'bingmappro_map_shortcodes';
 
-$bmp_query_map_pins     = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_map_pins}; ");
-$bmp_query_maps         = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_maps}; ");
-$bmp_query_pins         = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_pins}; ");
-$bmp_query_shapes       = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_shapes}; ");
-$bmp_query_map_shapes   = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_map_shapes}; ");
-$bmp_query_map_shortcodes = $wpdb->query("DROP TABLE IF EXISTS {$bmp_table_map_shortcodes}; ");
+$bmp_query_map_pins     = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;", 
+                            $bmp_table_map_pins));                               
+
+$bmp_query_maps         = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;", 
+                            $bmp_table_maps ));
+
+$bmp_query_pins         = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;", 
+                            $bmp_table_pins ));
+
+$bmp_query_shapes       = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;", 
+                            $bmp_table_shapes ));
+
+$bmp_query_map_shapes   = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;",
+                            $bmp_table_map_shapes ));
+
+$bmp_query_map_shortcodes = $wpdb->query( $wpdb->prepare(
+                                "DROP TABLE IF EXISTS %i;", 
+                            $bmp_table_map_shortcodes ));

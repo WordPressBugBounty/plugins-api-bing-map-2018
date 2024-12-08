@@ -2,9 +2,9 @@
 Contributors: dan009
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HH7J3U2U9YYQ2
 Tags: bing map, api bing map, maps, bing
-Requires at least: 5.0.1
-Tested up to: 6.5
-Stable tag: 5.0.1
+Requires at least: 5.2
+Tested up to: 6.7
+Stable tag: 5.0.2
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,9 @@ For support or suggestions please email me at: developer@tuskcode.com
 
 
 == Changelog ==
+= 2024-12-08
+Tested with Wordpress 6.7
+Changed actions and Active columns in Maps view
 
 = 2024-04-03
 * Tested with Wordpress 6.5

@@ -97,9 +97,9 @@ class BingMapPro_Infobox{
                                         <?php    
                                             echo( 
                                                 wp_sprintf( '%s <a href="%s" target="_blank"> %s </a>', 
-                                                                 __('You can find the Advanced Version ', 'bing-map-pro'), 
+                                                                 esc_html__('You can find the Advanced Version ', 'bing-map-pro'), 
                                                                 esc_url( BMP_URLS['adv_tinymce'] ) , 
-                                                                __('HERE', 'bing-map-pro')
+                                                                esc_html__('HERE', 'bing-map-pro')
                                                           )
                                                 ); 
                                         ?>
